@@ -298,9 +298,9 @@
 
 <div class="wrap">
   <div class="stats" role="list">
-    <div class="stat" role="listitem"><b>4,617</b><span><span class="ko">레코드</span><span class="en">Records</span></span></div>
-    <div class="stat" role="listitem"><b>101</b><span><span class="ko">취약점 유형</span><span class="en">Defect types</span></span></div>
-    <div class="stat" role="listitem"><b>9,736</b><span><span class="ko">추적 이벤트</span><span class="en">Trace events</span></span></div>
+    <div class="stat" role="listitem"><b>7,402</b><span><span class="ko">레코드</span><span class="en">Records</span></span></div>
+    <div class="stat" role="listitem"><b>7</b><span><span class="ko">언어</span><span class="en">Languages</span></span></div>
+    <div class="stat" role="listitem"><b>10,748</b><span><span class="ko">추적 이벤트</span><span class="en">Trace events</span></span></div>
     <div class="stat" role="listitem"><b>CC BY 4.0</b><span><span class="ko">데이터셋 라이선스</span><span class="en">Dataset license</span></span></div>
   </div>
 </div>
@@ -350,20 +350,20 @@
             <div class="solve-text">
               <div class="solve-tag"><span class="ko">문제 1 → 데이터셋</span><span class="en">Problem 1 → Dataset</span></div>
               <h3><span class="ko">맥락까지 담은 검증된 레코드</span><span class="en">Verified records with full context</span></h3>
-              <p><span class="ko">레코드마다 소스 파일 전체, source → branch → sink 추적 경로, 한·영 설명, 재분석으로 해결이 확인된 패치를 함께 담습니다. Java 레코드는 지금 바로 받을 수 있습니다.</span><span class="en">Every record carries the whole source file, the source → branch → sink trace, Korean and English explanations, and a patch confirmed by re-analysis. The Java records are available now.</span></p>
+              <p><span class="ko">레코드마다 소스 파일 전체, source → branch → sink 추적 경로, 한·영 설명, 재분석으로 해결이 확인된 패치를 함께 담습니다. C, C++, Java, Python, JavaScript, Go, TypeScript 7개 언어 레코드를 지금 받을 수 있습니다.</span><span class="en">Every record carries the whole source file, the source → branch → sink trace, Korean and English explanations, and a patch confirmed by re-analysis. Records for seven languages (C, C++, Java, Python, JavaScript, Go, TypeScript) are available now.</span></p>
               <a class="more" href="#dataset"><span class="ko">데이터셋 자세히</span><span class="en">Dataset details</span></a>
             </div>
             <div class="solve-fact">
-              <div><b>4,617</b><span><span class="ko">레코드</span><span class="en">Records</span></span></div>
-              <div><b>101</b><span><span class="ko">취약점 유형</span><span class="en">Defect types</span></span></div>
-              <div><b>9,736</b><span><span class="ko">추적 이벤트</span><span class="en">Trace events</span></span></div>
+              <div><b>7,402</b><span><span class="ko">레코드</span><span class="en">Records</span></span></div>
+              <div><b>7</b><span><span class="ko">언어</span><span class="en">Languages</span></span></div>
+              <div><b>10,748</b><span><span class="ko">추적 이벤트</span><span class="en">Trace events</span></span></div>
             </div>
           </article>
           <article class="solve">
             <div class="solve-text">
               <div class="solve-tag"><span class="ko">문제 2 → 모델</span><span class="en">Problem 2 → Model</span></div>
               <h3><span class="ko">자체 서버에서 도는 작은 모델</span><span class="en">Small models that run on your own server</span></h3>
-              <p><span class="ko">큰 교사 모델의 조치 제안 능력을 Qwen3.5-9B와 Qwen3.6-27B에 QLoRA로 옮기고, vLLM으로 온프레미스 서빙합니다. 가중치는 Apache 2.0으로 공개할 예정이며 지금은 준비 중입니다.</span><span class="en">The teacher's remediation ability moves into Qwen3.5-9B and Qwen3.6-27B through QLoRA, served on-premises with vLLM. The weights will be released under Apache 2.0 and are in progress.</span></p>
+              <p><span class="ko">큰 교사 모델의 조치 궤적으로 Qwen3.5-9B를 SFT한 뒤 GRPO로 강화학습해, Hugging Face에 Apache 2.0 전체 가중치로 공개했습니다. vLLM으로 온프레미스 서빙합니다.</span><span class="en">Qwen3.5-9B is fine-tuned on the teacher's remediation trajectories (SFT), then trained with GRPO, and published on Hugging Face as full Apache 2.0 weights. It serves on-premises with vLLM.</span></p>
               <a class="more" href="#model"><span class="ko">모델 자세히</span><span class="en">Model details</span></a>
             </div>
             <div class="solve-fact">
@@ -404,7 +404,7 @@
           </div>
           <div class="stage">
             <h4><span class="ko">3 · 증류 학습</span><span class="en">3 · Distill</span></h4>
-            <p><span class="ko">큰 교사 모델의 조치 제안을 작은 학생 모델에 QLoRA로 옮깁니다.</span><span class="en">Move the teacher's remediation behaviour into a small student with QLoRA.</span></p>
+            <p><span class="ko">교사 모델의 조치 궤적으로 SFT한 뒤, 재검증·심사 결과를 보상으로 GRPO 강화학습을 합니다.</span><span class="en">SFT on the teacher's remediation trajectories, then GRPO rewarded by the verifier and judge results.</span></p>
           </div>
           <div class="stage">
             <h4><span class="ko">4 · 에이전트 실행</span><span class="en">4 · Run</span></h4>
@@ -438,8 +438,8 @@
             <span class="en">Real findings from open-source code paired with verified patches, carrying whole source files rather than snippets.</span>
           </p>
           <dl>
-            <dt><span class="ko">레코드</span><span class="en">Records</span></dt><dd>4,617</dd>
-            <dt><span class="ko">유형</span><span class="en">Types</span></dt><dd>101</dd>
+            <dt><span class="ko">레코드</span><span class="en">Records</span></dt><dd>7,402</dd>
+            <dt><span class="ko">언어</span><span class="en">Languages</span></dt><dd>7</dd>
             <dt><span class="ko">형식</span><span class="en">Format</span></dt><dd>JSON Lines</dd>
             <dt><span class="ko">라이선스</span><span class="en">License</span></dt><dd>CC BY 4.0</dd>
           </dl>
@@ -450,18 +450,19 @@
           <svg class="icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="32" cy="32" r="6"/><circle cx="12" cy="14" r="4"/><circle cx="52" cy="14" r="4"/><circle cx="12" cy="50" r="4"/><circle cx="52" cy="50" r="4"/><path d="M15 17l12 11M49 17 37 28M15 47l12-11M49 47 37 36"/></svg>
           <div class="top">
             <h3><span class="ko">모델</span><span class="en">Model</span></h3>
-            <span class="status"><span class="ko">준비 중</span><span class="en">In progress</span></span>
+            <span class="status"><span class="ko">공개됨</span><span class="en">Available</span></span>
           </div>
           <p>
             <span class="ko">조치 제안에 특화해 파인튜닝한 가중치. 소스코드를 외부로 보낼 수 없는 환경에서 그대로 서빙할 수 있는 크기를 유지합니다.</span>
             <span class="en">Weights fine-tuned for remediation, kept small enough to serve where source code cannot leave the network.</span>
           </p>
           <dl>
-            <dt><span class="ko">베이스</span><span class="en">Base</span></dt><dd>Qwen3.5-9B · Qwen3.6-27B</dd>
-            <dt><span class="ko">학습</span><span class="en">Method</span></dt><dd>QLoRA</dd>
-            <dt><span class="ko">서빙</span><span class="en">Serving</span></dt><dd>vLLM</dd>
+            <dt><span class="ko">베이스</span><span class="en">Base</span></dt><dd>Qwen3.5-9B</dd>
+            <dt><span class="ko">학습</span><span class="en">Method</span></dt><dd>SFT → GRPO</dd>
+            <dt><span class="ko">서빙</span><span class="en">Serving</span></dt><dd>vLLM · Transformers</dd>
             <dt><span class="ko">라이선스</span><span class="en">License</span></dt><dd>Apache 2.0</dd>
           </dl>
+          <a class="go" href="https://huggingface.co/sparrow-co-ltd/qwen35-9b-secfix-grpo-lead-step300-merged">huggingface.co/sparrow-co-ltd/qwen35-9b-secfix-grpo-lead-step300-merged</a>
         </article>
 
         <article class="art i">
@@ -530,7 +531,7 @@
 }</pre>
       <div class="tablebox">
         <table>
-          <caption><span class="ko">현재 공개본 — Java</span><span class="en">Current release — Java</span></caption>
+          <caption><span class="ko">현재 공개본 — 핵심 데이터 7개 언어</span><span class="en">Current release — core data, 7 languages</span></caption>
           <thead>
             <tr>
               <th><span class="ko">항목</span><span class="en">Item</span></th>
@@ -539,11 +540,11 @@
             </tr>
           </thead>
           <tbody>
-            <tr><td><span class="ko">레코드</span><span class="en">Records</span></td><td class="num">4,617</td><td><span class="ko">파일 하나당 한 건, 중복 없음</span><span class="en">One per file, no duplicates</span></td></tr>
-            <tr><td><span class="ko">취약점 유형</span><span class="en">Defect types</span></td><td class="num">101</td><td><span class="ko">유형당 최대 100건</span><span class="en">Capped at 100 records per type</span></td></tr>
-            <tr><td><span class="ko">코드 길이</span><span class="en">File length</span></td><td class="num">9 / 117 / 2,998</td><td><span class="ko">최소 / 중앙값 / 최대 (라인)</span><span class="en">min / median / max lines</span></td></tr>
-            <tr><td><span class="ko">추적 이벤트</span><span class="en">Trace events</span></td><td class="num">9,736</td><td><span class="ko">레코드당 1~47개</span><span class="en">1 to 47 per record</span></td></tr>
-            <tr><td><span class="ko">파일 크기</span><span class="en">File size</span></td><td class="num">54 MB</td><td>JSON Lines, UTF-8</td></tr>
+            <tr><td><span class="ko">레코드</span><span class="en">Records</span></td><td class="num">7,402</td><td><span class="ko">C++ 2,479 · Java 2,324 · C 1,794 · JavaScript 332 · Go 222 · TypeScript 137 · Python 114. 별도 테스트 입력 1,231건</span><span class="en">C++ 2,479 · Java 2,324 · C 1,794 · JavaScript 332 · Go 222 · TypeScript 137 · Python 114, plus 1,231 separate test inputs</span></td></tr>
+            <tr><td><span class="ko">취약점 유형</span><span class="en">Defect types</span></td><td class="num">220</td><td><span class="ko">고유 유형명 기준. 언어별로 세면 331, 언어·유형당 최대 100건</span><span class="en">Distinct type names; 331 when counted per language; at most 100 records per language and type</span></td></tr>
+            <tr><td><span class="ko">코드 길이</span><span class="en">File length</span></td><td class="num">9 / 102 / 2,996</td><td><span class="ko">최소 / 중앙값 / 최대 (라인)</span><span class="en">min / median / max lines</span></td></tr>
+            <tr><td><span class="ko">추적 이벤트</span><span class="en">Trace events</span></td><td class="num">10,748</td><td><span class="ko">레코드당 1~62개</span><span class="en">1 to 62 per record</span></td></tr>
+            <tr><td><span class="ko">파일 크기</span><span class="en">File size</span></td><td class="num">77 MB</td><td>JSON Lines, UTF-8</td></tr>
           </tbody>
         </table>
       </div>
@@ -568,11 +569,11 @@
         </div>
         <div class="panel">
           <h3><span class="ko">학생 모델</span><span class="en">Student</span></h3>
-          <p><span class="ko">Qwen3.5-9B와 Qwen3.6-27B. 두 모델 모두 Apache 2.0이며 vLLM으로 온프레미스 서빙합니다.</span><span class="en">Qwen3.5-9B and Qwen3.6-27B, both Apache 2.0, served on-premises with vLLM.</span></p>
+          <p><span class="ko">Qwen3.5-9B. 학습한 모델을 <a href="https://huggingface.co/sparrow-co-ltd/qwen35-9b-secfix-grpo-lead-step300-merged">Hugging Face</a>에 Apache 2.0으로 공개했고 vLLM으로 온프레미스 서빙합니다.</span><span class="en">Qwen3.5-9B. The trained model is on <a href="https://huggingface.co/sparrow-co-ltd/qwen35-9b-secfix-grpo-lead-step300-merged">Hugging Face</a> under Apache 2.0 and serves on-premises with vLLM.</span></p>
         </div>
         <div class="panel">
           <h3><span class="ko">파인튜닝</span><span class="en">Fine-tuning</span></h3>
-          <p><span class="ko">QLoRA를 두 차례 적용합니다. 1차 학습 뒤 벤치마크로 확인하고, 2차에서 성능을 확정합니다.</span><span class="en">Two QLoRA runs: benchmark after the first, then confirm performance on the second.</span></p>
+          <p><span class="ko">1단계는 교사 에이전트 궤적 2,205개로 LoRA SFT, 2단계는 SAST 탐지 10,390건 풀에서 GRPO(GRPO-LEAD 길이·난이도 보정)입니다. 두 단계를 병합해 전체 가중치로 배포합니다. 이전 버전은 GRPO 180스텝 LoRA 어댑터입니다.</span><span class="en">Stage 1 is LoRA SFT on 2,205 teacher agent trajectories; stage 2 is GRPO with GRPO-LEAD length and difficulty shaping over a pool of 10,390 SAST findings. Both stages are merged into full weights. The earlier release was a LoRA adapter at GRPO step 180.</span></p>
         </div>
         <div class="panel">
           <h3><span class="ko">학습 데이터</span><span class="en">Training data</span></h3>
@@ -763,8 +764,8 @@ python scripts/validate.py --stats data/java/input.jsonl</pre>
       <span class="en">Dataset CC BY 4.0 · model weights Apache 2.0 · implementation MIT. Source code inside the dataset remains under its original licenses.</span>
     </div>
     <div>
-      <span class="ko">모델 가중치와 구현 저장소는 준비 중이며, 공개되면 이 페이지에서 링크합니다.</span>
-      <span class="en">Weights and implementation repositories are in progress; links will appear here once they are out.</span>
+      <span class="ko">모델 가중치는 <a href="https://huggingface.co/sparrow-co-ltd/qwen35-9b-secfix-grpo-lead-step300-merged">Hugging Face</a>에 공개되어 있습니다. 구현 저장소는 준비 중이며, 공개되면 이 페이지에서 링크합니다.</span>
+      <span class="en">Model weights are on <a href="https://huggingface.co/sparrow-co-ltd/qwen35-9b-secfix-grpo-lead-step300-merged">Hugging Face</a>. The implementation repositories are in progress; links will appear here once they are out.</span>
     </div>
   </footer>
 </div></div>
